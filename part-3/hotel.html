@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hotel</title>
+
+  <link rel="stylesheet" href="hotel.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Hotel</h1>
+  </header>
+
+  <div class="content">
+    <h1>Rooms</h1>
+    <table class="room-list">
+      <thead>
+        <th>Room #</th>
+        <th>Capacity</th>
+        <th>Rate / Night</th>
+        <th></th>
+      </thead>
+      <tbody class="rooms">
+        <tr id="room2B">
+          <td>2B</td>
+          <td>4</td>
+          <td>$59.99</td>
+          <td><button class="book-room">Book</button></td>
+        </tr>
+        <tr id="room2A">
+          <td>2A</td>
+          <td>4</td>
+          <td>$59.99</td>
+          <td><button class="book-room">Book</button></td>
+        </tr>
+        <tr id="room3A">
+          <td>3A</td>
+          <td>2</td>
+          <td>$45.00</td>
+          <td><button class="book-room">Book</button></td>
+        </tr>
+        <tr id="room3B">
+          <td>3B</td>
+          <td>2</td>
+          <td>$45.00</td>
+          <td><button class="book-room">Book</button></td>
+        </tr>
+        <tr id="room3C">
+          <td>3C</td>
+          <td>3</td>
+          <td>$52.64</td>
+          <td><button class="book-room">Book</button></td>
+        </tr>
+        <tr id="room4A">
+          <td>4A</td>
+          <td>4</td>
+          <td>$59.99</td>
+          <td><button class="book-room">Book</button></td>
+        </tr>
+        <tr id="room4B">
+          <td>4B</td>
+          <td>4</td>
+          <td>$59.99</td>
+          <td><button class="book-room">Book</button></td>
+        </tr>
+      </tbody>
+    </table>
+  <div class="booking-modal">
+    <div class="booking-modal-content">
+      <span class="close">&times;</span>
+      <h2>Booking</h2>
+      <div class="room-details">
+        <p>Room Number</p>
+        <p>Check In</p><input type="date"></input>
+        <input type="number" placeholder="how many nights?" class="room-total"><span>Nights</span></input>
+      </div>
+      <div class="booking-total"><strong>Total $<span class="total"></span></strong></div>
+      <button type="button" class="confirmation-button">Confirm</button>
+    </div>
+  </div>
+</div>
+  <script src="hotel.js"></script>
+</body>
+
+</html>

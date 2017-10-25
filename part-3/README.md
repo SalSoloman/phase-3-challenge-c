@@ -2,7 +2,7 @@
 
 To play: simply [clone the repository](https://github.com/SalSoloman/phase-3-challenge-c)
 
-Then `cd phase-3-challenge-c/part-3`
+`cd phase-3-challenge-c/part-3`
 
 `open hotel.html`
 

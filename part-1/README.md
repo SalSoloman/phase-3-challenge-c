@@ -3,7 +3,7 @@
 To use:
 [clone the repository](https://github.com/SalSoloman/phase-3-challenge-c)
 
-Then `cd phase-3-challenge-c/part-1`
+`cd phase-3-challenge-c/part-1`
 
 `npm install`
 `npm start`

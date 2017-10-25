@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "export NODE_ENV=test && dropdb hotel_db_test; createdb hotel_db_test; psql hotel_db_test < db/schema.sql; psql hotel_db_test < db/load-data.sql && mocha --reporter spec",
+    "db": "dropdb hotel_db; createdb hotel_db; psql hotel_db < db/schema.sql; psql hotel_db < db/load-data.sql",
+    "db:schema": "psql hotel_db < db/schema.sql",
+    "db:migrate": "psql hotel_db < db/load-data.sql"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "pg-promise": "^6.3.8"
+  }
 }

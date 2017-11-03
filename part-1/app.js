@@ -15,16 +15,17 @@ app.get('/api/shout/:word', (req, res) => {
   res.send(`${word}!!!`)
 })
 
+
 app.post('/api/array/merge', (req, res) => {
   const {a, b} = req.body
 
-  if (!Array.isArray(a) && !Array.isArray(b)) {
+  if (!Array.isArray(a) || !Array.isArray(b)) {
     res.status(400).send('Input data should be of type Array.')
   }
 
   let mergedArray = a.map((currentValue, index) => {
     return [currentValue, b[index]]
-  }).reduce((x, y) => x.concat(y))
+  }).reduce((x, y) => x.concat(y)).concat(b.slice(a.length))
 
   res.send({
     result: mergedArray
